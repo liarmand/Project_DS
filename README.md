@@ -1,16 +1,16 @@
 # Project_DS
 Distributed Systems course project. Innopolis University, 2019
 
-Team members:
-Eugene Bondarev
-Liliya Gabdrahimova
-Alexey Logachev
+- #### Team members:
+    - [Alexey Logachev](https://github.com/Picroc)
+    - [Eugene Bondarev](https://github.com/laser4622)
+    - [Liliya Gabdrahimova](https://github.com/liarmand)
 
-1. How to launch the system
+- #### Launcing the system
+    -
 
-2. System architecture diagram
-
-3. Description of communication protocol
-
-
+- #### System Architecture Diagram
+    ![](https://i.imgur.com/IH9KLRs.jpg)
+    
+- #### Protocols
 
