@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CustomLayout from "./Components/CustomLayout";
+import CustomTree from "./Components/CustomTree";
+import {SystemContextProvider} from "./context";
+import Directory from "./Components/Directory";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <SystemContextProvider>
+            <CustomLayout>
+                <Directory/>
+            </CustomLayout>
+        </SystemContextProvider>
     </div>
   );
 }

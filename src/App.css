@@ -1,22 +1,68 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+    height: 40vmin;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #09d3ac;
+    color: #09d3ac;
+}
+
+
+.ant-tree-title {
+    color: inherit;
+}
+
+.ant-tree.ant-tree-show-line li span.ant-tree-switcher {
+    color: hsla(0, 0%, 100%, .65);
+    background: transparent;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper:hover {
+    background-color: #002140;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper .ant-btn-background-ghost.ant-btn-link {
+    visibility: hidden;
+    height: 0px;
+    /*width: 10px;*/
+    margin: -9px 0 -9px 5px;
+
+    font-size: 14px;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper:hover .ant-btn-background-ghost.ant-btn-link {
+  visibility: visible;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected .ant-btn-background-ghost.ant-btn-link {
+  visibility: visible;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+    background-color: hsla(0, 0%, 100%, .65);
+    color: #002140;;
+}
+
+.ant-tree li .ant-tree-node-content-wrapper {
+    color: hsla(0, 0%, 100%, .65);
+}
+
+.logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px;
 }
