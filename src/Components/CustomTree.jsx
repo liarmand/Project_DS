@@ -31,12 +31,8 @@ const CustomTree = () => {
         const path = keys[0];
         if (path && currentPath !== path)
             cd(path);
-        console.log(path);
     };
 
-    const onExpand = () => {
-        console.log('Trigger Expand');
-    };
 
     const getTree = (node) => {
         const path = node.path.split('/');

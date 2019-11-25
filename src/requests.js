@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://localhost:5000';
+const baseUrl = 'http://18.197.132.179:5000';
 const getDir = (path) =>
     axios.get(`${baseUrl}/dirs`, {
         params: {

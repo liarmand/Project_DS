@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb393c09-df18-44f8-9880-2a2421cbe354" name="Default Changelist" comment="" />
+    <list default="true" id="cb393c09-df18-44f8-9880-2a2421cbe354" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Copy.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Info.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Move.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Rename.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CustomTree.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CustomTree.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/File.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/File.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/requests.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -32,11 +41,12 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Components" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -78,7 +88,7 @@
       <updated>1573910713242</updated>
       <workItem from="1573910714594" duration="38459000" />
       <workItem from="1574171370736" duration="3128000" />
-      <workItem from="1574691552718" duration="2431000" />
+      <workItem from="1574691552718" duration="8103000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1574703857758</created>
@@ -87,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574703857758</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1">
+      <created>1574704285427</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574704285427</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
