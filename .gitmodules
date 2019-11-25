@@ -1,0 +1,3 @@
+[submodule "dfs_servers"]
+	path = dfs_servers
+	url = https://github.com/Picroc/flask-dfs-service
