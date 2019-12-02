@@ -1,5 +1,6 @@
 import React, {useContext, useReducer} from "react";
 import requests from "./requests";
+import callbacks from "./callbacks";
 
 const SystemContext = React.createContext();
 
@@ -42,13 +43,22 @@ export const SystemContextProvider = ({children}) => {
     const [state, dispatch] = useReducer(reducer, {currentPath: '/', root:undefined});
 
     const initRoot = async () => {
-        const root = await requests.getDir('/');
+        let root = undefined;
+        try {
+            root = await requests.getDir('/');
+        }
+        catch (e) {
+            callbacks.error(e.message);
+            // console.log(e.message)
+        }
+
         const dir = localStorage.getItem('dir');
         dispatch({
             type: 'SET_ROOT',
             payload: root.data,
         });
         dir.length && dir!=='null' && await cd(dir)
+
     };
 
     const cd = async (value) => {

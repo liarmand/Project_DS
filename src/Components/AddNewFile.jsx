@@ -3,6 +3,7 @@ import {Button, Card, Input, Modal} from "antd";
 import CustomUpload from "./Upload";
 import {useSystemAction} from "../context";
 import requests from "../requests";
+import callbacks from "../callbacks";
 
 const { Search } = Input;
 
@@ -12,11 +13,17 @@ const AddNewFile = ({path,visible,setVisible,uploading}) => {
         setVisible(visible)
     },[visible]);
 
-    const addNewFile = (name) => {
-        // console.log(name)
-        requests.createFile(path,name).then(r => {
+    const addNewFile = async (name) => {
+        let ans = false;
+        return requests.createFile(path,name).then(r => {
             initRoot();
             open();
+            return `http://localhost:5000/files/transaction?dir=${path}&name=${name}`;
+        }).catch(e=>{
+            open();
+            callbacks.error(e.response.data.message);
+            console.log(e.response)
+            return ans
         })
     };
 

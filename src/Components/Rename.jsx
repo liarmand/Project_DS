@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Button, Card, TreeSelect, Input, Modal, Menu} from "antd";
 import {useSystemAction, useSystemState} from "../context";
 import requests from "../requests";
+import callbacks from "../callbacks";
 
 const getName = (path) => {
     const p = path.split('/');
@@ -19,10 +20,20 @@ const getTree = (node) => {
 
 const Rename = ({path,name,visible,setVisible}) => {
     const [newName, setNewName] = useState(name);
+    const {initRoot} = useSystemAction();
+
+    useEffect(()=>{
+        setNewName(name)
+    },[visible]);
 
 
-    const MoveFile = (name) => {
-        console.log()
+    const rename = () => {
+        requests.moveFile(path,name,path,newName).then(r => {
+            initRoot();
+        }).catch(r=>{
+            callbacks.error(r.response.data.message)
+        });
+        open();
     };
 
     const open = () => {
@@ -34,7 +45,7 @@ const Rename = ({path,name,visible,setVisible}) => {
             <Modal
                 title={"Rename File"}
                 visible={visible}
-                onOk={MoveFile}
+                onOk={rename}
                 // footer={false}
                 onCancel={open}
             >

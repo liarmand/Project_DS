@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb393c09-df18-44f8-9880-2a2421cbe354" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Copy.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Info.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Move.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Rename.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/DFS.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/callbacks.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AddNewDirectory.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AddNewDirectory.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AddNewFile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AddNewFile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Copy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Copy.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/CustomTree.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CustomTree.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Directory.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Directory.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/File.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/File.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Info.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Move.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Move.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Rename.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Rename.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Upload.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Upload.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/requests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/requests.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +39,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -41,12 +48,13 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Components" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -88,7 +96,9 @@
       <updated>1573910713242</updated>
       <workItem from="1573910714594" duration="38459000" />
       <workItem from="1574171370736" duration="3128000" />
-      <workItem from="1574691552718" duration="8103000" />
+      <workItem from="1574691552718" duration="10296000" />
+      <workItem from="1574885903217" duration="233000" />
+      <workItem from="1575118781668" duration="9517000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1574703857758</created>
@@ -104,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574704285427</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+add copy, rename, move, get info">
+      <created>1574710288233</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1574710288233</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +142,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1" />
+    <MESSAGE value="+add copy, rename, move, get info" />
+    <option name="LAST_COMMIT_MESSAGE" value="+add copy, rename, move, get info" />
   </component>
 </project>

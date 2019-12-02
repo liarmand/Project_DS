@@ -16,13 +16,17 @@ const Directory = () => {
         const path = currentPath.split('/');
         let dir = root;
         let tempPath = '';
-        path.forEach(p => {
-            if(p==='')
-                return 0;
-            tempPath = `${tempPath}/${p}`;
-            dir = dir.dirs.find(d=>d.path===tempPath);
-        });
-        // console.log(dir)
+        try {
+
+            path.forEach(p => {
+                if(p==='')
+                    return 0;
+                tempPath = `${tempPath}/${p}`;
+                dir = dir.dirs.find(d=>d.path===tempPath);
+            });
+        }catch (e) {
+            dir=root;
+        }
         dir && setFiles(dir.files);
     },[root,currentPath]);
 

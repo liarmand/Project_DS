@@ -7,7 +7,9 @@ import Rename from "./Rename";
 import Copy from "./Copy";
 import Info from "./Info";
 
-const extensions = ['txt'];
+const extensions = ['add', 'eps', 'indd', 'cdr', 'gif', 'psd', '', 'wmv', 'dll', 'zip', 'doc', 'sql', 'raw',
+    'js', 'xml', 'txt', 'png', 'aac', 'ps', 'xls', 'avi', 'html', 'jpg', '3ds', '1', 'mov', 'cad', 'mp3',
+    'pdf', 'ppt', 'flv', 'fla', 'dmg', 'tif', 'iso', 'php', 'mpg', 'css', 'dat', 'svg', 'ai', 'default', 'bmp', 'midi', 'mp4'];
 
 const File = ({file}) => {
     const {initRoot} = useSystemAction();
@@ -17,7 +19,10 @@ const File = ({file}) => {
     const [visibleI,setVisibleI] = useState(false);
     const name = file.name.split('.');
     const extension = name[name.length - 1];
-    const img = extension === 'txt' ? `/icons/${extension}.png` : `/icons/default.png`;
+
+    console.log(extensions.find(e => extension===e))
+
+    const img = extensions.find(e => extension===e) ? `/icons/${extension}.png` : `/icons/default.png`;
 
     const handleDelete = () => {
         requests.deleteFile(file.dir,file.name).then(r => {

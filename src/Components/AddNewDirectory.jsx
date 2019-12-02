@@ -2,11 +2,12 @@ import {Button, Modal, Input} from "antd";
 import React, {useEffect, useState} from "react";
 import {useSystemAction} from "../context";
 import requests from "../requests";
+import callbacks from "../callbacks";
 
 const {Search} = Input;
 
 const AddNewDirectory = ({name, path}) => {
-    const {initRoot} = useSystemAction();
+    const {initRoot, cd} = useSystemAction();
     const [visibleAdd, setVisibleAdd] = useState(false);
 
     const [visibleSetting, setVisibleSetting] = useState(false);
@@ -20,6 +21,8 @@ const AddNewDirectory = ({name, path}) => {
         requests.createDir(path, name).then(r => {
             initRoot();
             openAdd();
+        }).catch(e=>{
+            callbacks.error(e.response.data.message)
         })
     };
 
@@ -37,6 +40,7 @@ const AddNewDirectory = ({name, path}) => {
         requests.deleteDir(dir, name).then(r => {
             initRoot();
             openSetting();
+            cd(dir);
         })
     };
 
@@ -47,6 +51,8 @@ const AddNewDirectory = ({name, path}) => {
     const openSetting = () => {
         setVisibleSetting(!visibleSetting)
     };
+
+
 
 
     return (
@@ -62,27 +68,20 @@ const AddNewDirectory = ({name, path}) => {
             {path !== '/' &&
             <>
                 <Button type="link"
-                        ghost icon="setting" size="small"
+                        ghost icon="delete" size="small"
                         style={{padding: 0, display: 'inline-block'}}
                         onClick={openSetting}
                 />
                 <Modal
-                    title={`Settings ${name}`}
+                    title={`Confirm deletion`}
                     visible={visibleSetting}
                     footer={<div>
-                        <Button type="danger" size="small" onClick={deleteDir}>Delete</Button>
+                        <Button onClick={openSetting}>No</Button>
+                        <Button type="danger" onClick={deleteDir}>Yes</Button>
                     </div>}
                     onCancel={openSetting}
                 >
-                    <div>
-                        <Search
-                            placeholder="input new directory name"
-                            enterButton="Rename"
-                            onSearch={value => {
-                            }}
-                        />
-
-                    </div>
+                    All files in this directory will be deleted. Do you want to delete this directory?
 
                 </Modal>
             </>

@@ -13,7 +13,7 @@ const Info = ({path,name,visible,setVisible}) => {
             setInfo(r.data);
             console.log(r.data)
         })
-    },[name,path]);
+    },[name,path,visible]);
 
     const MoveFile = (name) => {
         console.log(newDir)

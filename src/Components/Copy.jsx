@@ -20,12 +20,15 @@ const getTree = (node) => {
 const Copy = ({path,name,visible,setVisible}) => {
     const {initRoot} = useSystemAction();
     const {root, currentPath} = useSystemState();
-    const [newDir, setNewDir] = useState('/');
+    const [newDir, setNewDir] = useState(path);
     const [newName, setNewName] = useState('copy_'+name);
 
 
-    const MoveFile = (name) => {
-        console.log(newDir)
+    const copyFile = () => {
+        requests.moveFile(path,name,newDir,newName,true).then(r => {
+            initRoot();
+        });
+        open();
     };
 
     const onChangeDir = value => {
@@ -43,7 +46,7 @@ const Copy = ({path,name,visible,setVisible}) => {
             <Modal
                 title={"Copy File"}
                 visible={visible}
-                onOk={MoveFile}
+                onOk={copyFile}
                 // footer={false}
                 onCancel={open}
             >

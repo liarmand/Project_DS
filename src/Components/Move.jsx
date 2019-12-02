@@ -7,7 +7,7 @@ const getName = (path) => {
     const p = path.split('/');
     return p[p.length-1];
 };
-const getTree = (node) => {
+const getTree = (node, prefix='') => {
     const title = node.path === '/'? 'root': getName(node.path);
     return {
         title,
@@ -20,11 +20,16 @@ const getTree = (node) => {
 const Move = ({path,name,visible,setVisible}) => {
     const {initRoot} = useSystemAction();
     const {root, currentPath} = useSystemState();
-    const [newDir, setNewDir] = useState('/');
+    const [newDir, setNewDir] = useState(path);
 
 
-    const MoveFile = (name) => {
-        console.log(newDir)
+    const MoveFile = () => {
+        console.log(path,name,newDir,name)
+        requests.moveFile(path,name,newDir,name).then(r => {
+            initRoot();
+        });
+        open();
+        // console.log(newDir)
     };
 
     const onChangeDir = value => {
