@@ -18,8 +18,8 @@ Distributed Systems course project. Innopolis University, 2019
 - #### Protocols
     We decided to devide the system into two parts: frontend (front side) for the client and backend.
     
-    Connection between the frontend and naming servers is implemented using Rest API. 
-    End points of Naming server are:
+    Connection implemented using Rest API.
+    End points are:
     - GET /Init (Initialize function)
     - GET /Get dirs (Read directory)
     - POST /Create dir (Make directory)
@@ -29,11 +29,7 @@ Distributed Systems course project. Innopolis University, 2019
     - DELETE /Delete file (File delete)
     - POST /Write to file (File write)
     - GET /Read from file (File read)
-    - GET /Move (File move)
-    Open directory function is based only on frontend part.
+    - GET /Move (File move and file copy with parameter copy)
     
-    Connection between the Naming server and Storage servers is implemented using Rest API and overlay network.
-    End points of Storage server are:
-    - POST /transaction — save attached file
-    - GET /transaction?filename=abcde — get file with filename passed in arguments
-    - DELETE /transaction?filename=abcde — delete file
+    Open directory function is based only on frontend part.
+   
