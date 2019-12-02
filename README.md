@@ -30,5 +30,6 @@ Distributed Systems course project. Innopolis University, 2019
     - POST /Write to file (File write)
     - GET /Read from file (File read)
     - GET /Move (File move and file copy with parameter copy)
+    
     Open directory function is based only on frontend part.
    
