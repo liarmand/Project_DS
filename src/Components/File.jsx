@@ -24,6 +24,7 @@ const File = ({file}) => {
     console.log(extensions.find(e => extension===e))
 
     const img = extensions.find(e => extension===e) ? `/icons/${extension}.png` : `/icons/default.png`;
+    console.log(img)
 
     const handleDelete = () => {
         requests.deleteFile(file.dir,file.name).then(r => {
