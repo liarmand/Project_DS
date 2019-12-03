@@ -62,7 +62,12 @@
 }
 
 .logo {
-    height: 32px;
-    background: rgba(255, 255, 255, 0.2);
+    height: 45px;
+    /*background: rgba(255, 255, 255, 0.2);*/
+    /*background-image: url("/DFS.png");*/
+    /*background-size: 100% auto;*/
+    font-size: x-large;
+    color: white;
+    font-family: "Times New Roman";
     margin: 16px;
 }

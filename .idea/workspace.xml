@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cb393c09-df18-44f8-9880-2a2421cbe354" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Copy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Copy.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/File.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/File.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Move.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Move.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/DFS.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/DFS.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/CustomLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/CustomLayout.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +88,7 @@
       <workItem from="1574691552718" duration="10296000" />
       <workItem from="1574885903217" duration="233000" />
       <workItem from="1575118781668" duration="14411000" />
-      <workItem from="1575387084488" duration="976000" />
+      <workItem from="1575387084488" duration="1996000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1574703857758</created>
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575387109491</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="+add copy, rename, move, get info">
+      <created>1575388398915</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575388398915</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

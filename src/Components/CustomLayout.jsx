@@ -28,13 +28,16 @@ const CustomLayout = ({children}) => {
             width= "280px"
             style={{
                 overflow: 'scroll',
-                height: '100vh',
+                minHeight: '100vh',
+                height: '100%',
                 minWidth: '20vw',
                 position: 'fixed',
                 left: 0,
             }}
         >
-            <div className="logo" />
+            <div className="logo" >
+                DS Project
+            </div>
 
             <div style={{height:'82vh'}}>
                 {loading?
