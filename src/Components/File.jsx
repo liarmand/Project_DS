@@ -6,6 +6,7 @@ import Move from "./Move";
 import Rename from "./Rename";
 import Copy from "./Copy";
 import Info from "./Info";
+import callbacks from "../callbacks";
 
 const extensions = ['add', 'eps', 'indd', 'cdr', 'gif', 'psd', '', 'wmv', 'dll', 'zip', 'doc', 'sql', 'raw',
     'js', 'xml', 'txt', 'png', 'aac', 'ps', 'xls', 'avi', 'html', 'jpg', '3ds', '1', 'mov', 'cad', 'mp3',
@@ -26,6 +27,7 @@ const File = ({file}) => {
 
     const handleDelete = () => {
         requests.deleteFile(file.dir,file.name).then(r => {
+            callbacks.success(`${file.name} was deleted`)
             initRoot();
         });
     };

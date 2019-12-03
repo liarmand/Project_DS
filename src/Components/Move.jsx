@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Button, Card, TreeSelect, Input, Modal, Menu} from "antd";
 import {useSystemAction, useSystemState} from "../context";
 import requests from "../requests";
+import callbacks from "../callbacks";
 
 const getName = (path) => {
     const p = path.split('/');
@@ -26,6 +27,8 @@ const Move = ({path,name,visible,setVisible}) => {
     const MoveFile = () => {
         console.log(path,name,newDir,name)
         requests.moveFile(path,name,newDir,name).then(r => {
+
+            callbacks.success(`${name} was moved`);
             initRoot();
         });
         open();

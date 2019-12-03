@@ -27,6 +27,7 @@ const Copy = ({path,name,visible,setVisible}) => {
 
     const copyFile = () => {
         requests.moveFile(path,name,newDir,newName,true).then(r => {
+            callbacks.success(`${name} was copied`);
             initRoot();
         }).catch(e => {
             callbacks.error(e.response.data.message)

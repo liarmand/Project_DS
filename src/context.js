@@ -57,7 +57,7 @@ export const SystemContextProvider = ({children}) => {
             type: 'SET_ROOT',
             payload: root.data,
         });
-        dir.length && dir!=='null' && await cd(dir)
+        dir&&dir.length && dir!=='null' && await cd(dir)
 
     };
 
