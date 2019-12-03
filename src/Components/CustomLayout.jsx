@@ -1,9 +1,10 @@
-import {Layout, Menu, Icon, Breadcrumb} from 'antd';
+import {Layout, Menu, Icon, Breadcrumb, Button} from 'antd';
 import React, {useEffect, useState} from "react";
 import CustomTree from "./CustomTree";
 import CustomBreadcrumb from "./CustomBreadcrumb";
 import axios from 'axios';
 import {useSystemAction} from "../context";
+import Init from "./Init";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -35,10 +36,13 @@ const CustomLayout = ({children}) => {
         >
             <div className="logo" />
 
-            {loading?
-                <Icon type="loading" style={{color:'hsla(0,0%,100%,.65)', fontSize:'5vw'}} />:
-                <CustomTree/>
-            }
+            <div style={{height:'82vh'}}>
+                {loading?
+                    <Icon type="loading" style={{color:'hsla(0,0%,100%,.65)', fontSize:'5vw'}} />:
+                    <CustomTree/>
+                }
+            </div>
+            <Init/>
 
 
         </Sider>

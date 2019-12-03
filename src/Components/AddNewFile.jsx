@@ -13,17 +13,14 @@ const AddNewFile = ({path,visible,setVisible,uploading}) => {
         setVisible(visible)
     },[visible]);
 
-    const addNewFile = async (name) => {
-        let ans = false;
+    const addNewFile = (name) => {
         return requests.createFile(path,name).then(r => {
             initRoot();
             open();
-            return `http://localhost:5000/files/transaction?dir=${path}&name=${name}`;
+            return `http://localhost:5000/files/transaction?dir=${path}&name=${name}`
         }).catch(e=>{
             open();
             callbacks.error(e.response.data.message);
-            console.log(e.response)
-            return ans
         })
     };
 

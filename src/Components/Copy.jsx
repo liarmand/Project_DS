@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Button, Card, TreeSelect, Input, Modal, Menu} from "antd";
 import {useSystemAction, useSystemState} from "../context";
 import requests from "../requests";
+import callbacks from "../callbacks";
 
 const getName = (path) => {
     const p = path.split('/');
@@ -27,6 +28,8 @@ const Copy = ({path,name,visible,setVisible}) => {
     const copyFile = () => {
         requests.moveFile(path,name,newDir,newName,true).then(r => {
             initRoot();
+        }).catch(e => {
+            callbacks.error(e.response.data.message)
         });
         open();
     };

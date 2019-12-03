@@ -40,7 +40,7 @@ const Info = ({path,name,visible,setVisible}) => {
                 <div style={{fontSize: 'large', width:'60%',display:'inline-block'}}>
                     {info.dir}<br/>
                     {info.name}<br/>
-                    {info.metadata&&info.metadata.size} Byte<br/>
+                    {info.metadata&&(info.metadata.size/1024/1024).toFixed(3)} MByte<br/>
                 </div>
 
             </Modal>

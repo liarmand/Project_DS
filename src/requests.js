@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const baseUrl = 'http://18.197.132.179:5000';
-const baseUrl = 'http://127.0.0.1:5000';
+const baseUrl = 'http://18.194.234.210:5000';
+// const baseUrl = 'http://127.0.0.1:5000';
 const getDir = (path) =>
     axios.get(`${baseUrl}/dirs`, {
         params: {
@@ -125,6 +125,18 @@ const moveFile = (dir, name, dest, dest_name, copy) =>{
     });
 };
 
+const getInfo = () => axios({
+    "method": "GET",
+    "url": `${baseUrl}/info`,
+    "async": true,
+    "crossDomain": true,
+});
 
-const requests = {getDir, createFile, deleteFile,createDir,deleteDir,uploadFile,downloadFile,getFileInfo,moveFile};
+const init = () => axios({
+    "method": "GET",
+    "url": `${baseUrl}/init`,
+});
+
+
+const requests = {getDir, createFile, deleteFile,createDir,deleteDir,uploadFile,downloadFile,getFileInfo,moveFile,getInfo,init};
 export default requests;

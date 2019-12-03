@@ -7,7 +7,8 @@ const CustomUpload = ({path, addNewFile}) =>  {
     const props = {
         name: 'attach',
         action(file) {
-            return addNewFile(file.name);
+            addNewFile(file.name);
+            return `http://18.194.234.210:5000/files/transaction?dir=${path}&name=${file.name}`;
         },
         onChange(info) {
             if (info.file.status === 'done') {
